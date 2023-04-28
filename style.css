@@ -279,7 +279,12 @@ h3{
   width:70vw;
   color:var(--color-font)
 }
-
+.aviso-tabla{
+  text-align: center;
+  margin-top: 2rem;
+margin-bottom: -3rem;
+  display: none; 
+}
 @media screen and (max-width: 500px) {
   th:nth-child(5), td:nth-child(5),
   th:nth-child(6), td:nth-child(6),
@@ -290,9 +295,14 @@ h3{
    th:nth-child(11), td:nth-child(11){
     display:none;
   }
+
+  .aviso-tabla{
+     display: block; 
+  }
 }
 
 @media screen and (min-width: 1024px) {
+
   .header {
     position: fixed;
     left: 0;
@@ -326,13 +336,14 @@ h3{
     pointer-events: auto;
   }
 
-  .menu a {
+  .menu a{
+    display: inline;
     padding: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
-
+  
   .menu a:last-child {
-    padding-right: 2rem;
+    margin-right: 2rem;
   }
 
   table{
