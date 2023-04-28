@@ -1,0 +1,347 @@
+/* declaracion de variables */
+:root {
+    --color-bordes: #1d1d1d;
+    --color-primario: #e9f3f8;
+    --color-secundario: #04486a;
+    --color-sombra: rgba(0, 0, 0, 0.16);
+    --color-font:#fff;
+    --color-celdas:#27272733;;
+    --filter-blur: rgba(0, 0, 0, 0.1);
+    --color-nav:rgb(75, 90, 105);
+    --color-sombra-hero:rgba(0, 0, 0, 0.5);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html{
+    background-color:var(--color-primario);
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth; /* animacion suave del scroll  */
+}
+
+body{
+  margin: 0;
+}
+
+ footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 64px;
+  padding: 1rem;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  text-align: center;
+  }
+
+  /* ********** HeroImage ********** */
+.hero-image {
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: var(--hero-attachment);
+}
+.hero-image-content img{
+width: 20vw;
+margin-left: 10vw;
+margin-right: 10vw;
+}
+
+.hero-image-opacity {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color);
+}
+
+.hero-image-title {
+  font-size: 5.5vw;
+  color: var(--color-font);
+}
+
+/* menu */
+.header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 1rem;
+  width: 100%;
+  height: 4rem;
+  background-color: var(--color-secundario);
+  border-top: solid 1px var(--color-primario);
+  color: var(--color-primario);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--color-font);
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.menu-btn {
+  outline: thin solid var(--color-secundario);
+  border: 0;
+  cursor: pointer;
+  background-color: var(--color-secundario);
+}
+
+.menu-btn svg {
+  fill: var(--color-font);
+}
+
+.none {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-secundario);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-tarjeta);
+}
+
+
+/* ****************** card ****************** */
+.section-paridos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80vw;   
+    margin: 0 auto;
+    }
+
+.card-partidos{
+    display: flex;
+    width: 400px;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.1),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: var(--filter-blur);
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: var(--color-bordes);
+    border: solid 1px var(--filter-blur);
+}
+
+.card-partidos img{
+    width: 2rem;
+    height: auto;
+    margin: 0 5%;
+}
+
+.partidos{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 70%;
+}
+
+.hora{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30%;
+    border-left: 1px solid var(--color-bordes);
+}
+
+.equipo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+/* ****************** table ****************** */
+
+table{
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.section-table{
+  overflow-x: auto;
+}
+
+tr{ 
+    border-bottom: 1px solid var(--color-bordes);
+}
+
+tr:nth-child(even){
+  background-color: var(--color-celdas);
+}
+
+td{
+  text-align: center;
+}
+
+tr th, td:nth-child(1){
+    width: 5vw;
+    text-align: center;
+}
+tr td:nth-child(2){
+  text-align: center;
+}
+
+tr td:nth-child(3){
+    width: 50vw;
+    line-height: 1px;
+    text-align: left;
+    margin-left: -10rem;
+}
+
+tr th, td:nth-child(4){
+    width: 5vw;
+    text-align: center;
+}
+
+td img{
+  width: 2rem;
+  height: auto;
+}
+
+h2{
+  margin-top: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: var(--color-bordes);
+  padding: 0.5rem;
+  border-radius: 20px;
+  width:80vw;
+  color:var(--color-font)
+}
+
+
+h3{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: var(--color-secundario);
+  padding: 0.5rem;
+  border-radius: 20px;
+  width:70vw;
+  color:var(--color-font)
+}
+
+@media screen and (max-width: 500px) {
+  th:nth-child(5), td:nth-child(5),
+  th:nth-child(6), td:nth-child(6),
+  th:nth-child(7), td:nth-child(7),
+  th:nth-child(8), td:nth-child(8),
+   th:nth-child(9), td:nth-child(9), 
+   th:nth-child(10), td:nth-child(10), 
+   th:nth-child(11), td:nth-child(11){
+    display:none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    padding: 1rem;
+    height: 4rem;
+    border:none;
+  }
+
+  .hero-image-content img{
+    width: 20vw;
+    margin-top: 0;
+    padding-top:5rem;
+    }
+
+  .hero-image-title {
+    font-size: 3vw;
+    margin-top: 2vw;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+  }
+
+  .menu a:last-child {
+    padding-right: 2rem;
+  }
+
+  table{
+    width: 80vw;
+  }
+
+  footer{
+    margin-bottom:0;
+    }
+    
+
+}
