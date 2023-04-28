@@ -39,6 +39,7 @@ body{
   background-color: var(--color-secundario);
   color: var(--color-primario);
   text-align: center;
+  font-size: 1.2rem;
   }
 
   /* ********** HeroImage ********** */
@@ -284,6 +285,9 @@ h3{
   margin-top: 2rem;
 margin-bottom: -3rem;
   display: none; 
+}
+footer a{
+  color:var(--color-font);
 }
 @media screen and (max-width: 500px) {
   th:nth-child(5), td:nth-child(5),
